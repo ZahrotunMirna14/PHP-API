@@ -30,8 +30,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `users` (
   `Id` int(10) NOT NULL,
-  `Usename` varchar(255) NOT NULL,
-  `Kata sandi` varchar(255) NOT NULL,
+  `Username` varchar(255) NOT NULL,
+  `Password` varchar(255) NOT NULL,
   `Level` enum('user','admin','guest') NOT NULL,
   `Fullname` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -40,13 +40,12 @@ CREATE TABLE `users` (
 -- Dumping data untuk tabel `users`
 --
 
-INSERT INTO `users` (`Id`, `Usename`, `Kata sandi`, `Level`, `Fullname`) VALUES
+INSERT INTO users VALUES(`Id`, `Username`, `Level`, `Password`, `Fullname`)VALUES
 (1, 'ZahrotunN', 'niinver12', 'admin', 'Zahrotun Mirna Nisa'),
 (2, 'ZulfaB', 'zulfa1', 'user', 'Zulfa Basmallah Agustyn'),
 (3, 'ZaidanA', 'zidan1', 'user', 'Zaidan Ahmad Huda'),
 (4, 'Afrelelda', 'eldaa1', 'user', 'Afrel Elda Magdalena'),
 (5, 'AfrizalF', 'afrizal1', 'user', 'Afrizal Fajar Barokah');
-
 --
 -- Indexes for dumped tables
 --
