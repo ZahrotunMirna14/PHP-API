@@ -4,13 +4,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Formulir</title>
+	<title>Edit</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<form name="" method="POST" action="action.php" id="input-form"> 
+
+  <a href="index.php">Lihat Semua Data</a>
+
+<form method="POST" action="edit-aksi.php" id="input-form"> 
         <div>
-          <h1> FORMULIR </h1>
+          <h1> EDIT DATA </h1>
         </div>
         <div class="form">
           <label for="">Id</label><br>

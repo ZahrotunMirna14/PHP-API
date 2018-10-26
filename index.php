@@ -23,21 +23,26 @@ $students = query("SELECT * FROM users");
 	</head>
 	<body>
 		<h1 style="text-align: center;">Data Siswa</h1>
-		<table border="1px" cellpadding="10" cellspacing="0" style="margin-left: 32%">
+		<table border="1px" cellpadding="10" cellspacing="0" style="margin-left: 33%">
 	 		<tr>
-	 			<td bgcolor="#D6D8DC" align="center">Id</td>
-	 			<td bgcolor="#D6D8DC" align="center">Username</td>
-	 			<td bgcolor="#D6D8DC" align="center">Password</td>
-	 			<td bgcolor="#D6D8DC" align="center">Level</td>
-	 			<td bgcolor="#D6D8DC" align="center">Fullname</td>
+	 			<td bgcolor="#150e63" align="center" style="color: #ffffff">Id</td>
+	 			<td bgcolor="#150e63" align="center" style="color: #ffffff">Username</td>
+	 			<td bgcolor="#150e63" align="center" style="color: #ffffff">Password</td>
+	 			<td bgcolor="#150e63" align="center" style="color: #ffffff">Level</td>
+	 			<td bgcolor="#150e63" align="center" style="color: #ffffff">Fullname</td>
+	 			<td bgcolor="#150e63" align="center" style="color: #ffffff">Aksi</td>
 	 		</tr>
 	 		<?php foreach($students as $student) : ?>
 				 <tr>
-				 	<td><?= $student["Id"] ?></td>
+				 	<td><?= $student["Id"] ?></td>				 	
 				 	<td><?= $student["Username"] ?></td>				 	
 				 	<td><?= $student["Password"] ?></td>
 				 	<td><?= $student["Level"] ?></td>
 				 	<td><?= $student["Fullname"] ?></td>
+				 	<td>
+						<a  href="edit.php?id=<?php echo $student['Id']; ?>">Edit</a> |
+						<a  href="delete.php?id=<?php echo $student['Id']; ?>">Hapus</a>
+		  			</td>
 				 </tr>
 				<?php endforeach; ?>
 	 	</table>
